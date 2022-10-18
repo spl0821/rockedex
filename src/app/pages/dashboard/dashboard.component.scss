@@ -1,0 +1,141 @@
+.dashboard{
+    padding: 5% 4%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.dashboard__searchbar{
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: end;
+}
+
+.dashboard__pokemons{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 4%;
+    // background-color: #F0A23B;
+}
+
+.dashboard__seemore{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.btn__seemore{
+    background-color: rgb(229,231,234);
+    font-weight: 700;
+}
+
+.input-group{
+    width: 30%;
+    right: 5px;
+}
+
+.form-control{
+    border-radius: 6px;
+}
+
+h1{
+    position: absolute;
+    left: 0;
+}
+
+.card{
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 0.5px 2px;
+    border-width: 0;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.btn__hearticon{
+    display: flex;
+    justify-content: end;
+}
+
+.icon__image-centered{
+    display: flex;
+    justify-content: center;
+    padding: 2%;
+}
+
+p b{
+    font-size: 10px;
+}
+
+.btn__power{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.pkm__details{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.img-fluid{
+    max-width: 80%;
+}
+
+app-pkm-fav-button{
+    position: absolute;
+    top: 0;
+}
+
+// Desktop settings
+@media screen and (min-device-width: 1200px)  { 
+    .card{
+        width: 33%;
+    }
+
+    .btn__seemore{
+        width: 30%;
+    }
+}
+
+// Tablet settings
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 1199px) {
+    .card{
+        width: 48%;
+    }
+    .pkm__details{
+        font-size: 1rem !important;
+    }
+}
+
+// Mobile settings
+@media only screen 
+  and (max-device-width: 767px) {
+    .btn__seemore{
+        width: 100%;
+    }
+
+    .dashboard__searchbar{
+        height: 1rem;
+    }
+
+    h1{
+        font-size: 15px;
+    }
+
+    .form-control{
+        font-size: 8px;
+    }
+
+    .btn__search{
+        display: flex;
+        align-items: center;
+        font-size: 8px;
+    }
+}

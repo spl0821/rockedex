@@ -1,0 +1,3 @@
+<button [ngClass]="{'btn__checked': checked, 'btn__noChecked': !checked}" pButton pRipple type="button"
+    [icon]="checked ? 'pi pi-heart-fill' : 'pi pi-heart'"
+    class="p-button-rounded p-button-secondary p-button-text" (click)="favorite()"></button>

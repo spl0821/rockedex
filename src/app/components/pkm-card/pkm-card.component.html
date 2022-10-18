@@ -1,0 +1,16 @@
+<div class="row g-0">
+    <div class="col-4 icon__image-centered" (click)="goDetail(pokemon)">
+        <img src="{{pokemon.sprites.other.dream_world.front_default}}" class="img-fluid rounded-start"
+            alt="...">
+    </div>
+    <div class="col-4 p-2 fs-5 pkm__details" (click)="goDetail(pokemon)">
+        <p>{{pokemon.id}}</p>
+        <b>{{pokemon.name | titlecase}}</b>
+        <div class="btn__power">
+            <app-pkm-button *ngFor="let type of pokemon.types" [pkmType]="type.type.name"></app-pkm-button>
+        </div>
+    </div>
+    <div class="col-4 btn__hearticon">
+        <app-pkm-fav-button [pokemon]="pokemon" [checked]="pokemon.checked"></app-pkm-fav-button>
+    </div>
+</div>

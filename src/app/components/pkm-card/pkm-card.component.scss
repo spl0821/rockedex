@@ -1,0 +1,70 @@
+.icon__image-centered{
+    display: flex;
+    justify-content: center;
+    padding: 2%;
+}
+
+.pkm__details{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.btn__power{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.btn__hearticon{
+    display: flex;
+    justify-content: end;
+}
+
+// Desktop settings
+@media screen and (min-device-width: 1200px)  { 
+
+}
+
+// Tablet settings
+@media only screen 
+  and (min-device-width: 200px) 
+  and (max-device-width: 1199px) {
+    .pkm__details{
+        font-size: 1rem !important;
+    }
+
+    .btn__hearticon{
+        position: absolute;
+        right: 0;
+    }
+}
+
+// Mobile settings
+@media only screen 
+  and (max-device-width: 767px) {
+    .row{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .icon__image-centered{
+        align-self: center;
+        width: 50%;
+    }
+
+    .pkm__details{
+        width: 100%;
+        font-size: 1rem !important;
+        padding: 6% !important;
+    }
+
+    .btn__power{
+        width: 100%;
+        justify-content: start;
+    }
+
+    app-pkm-button{
+        margin-right: 3%;
+    }
+}

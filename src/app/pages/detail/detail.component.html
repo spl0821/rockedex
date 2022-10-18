@@ -1,0 +1,28 @@
+<div class="detail__container">
+    <div>
+        <img src="../../../assets/arrow-left.svg" alt="back" class="btn__back" (click)="goDashboard()">
+    </div>
+    <div class="container__detail">
+        <div class="img__pokemoncontainer">
+            <img class="img__pkm" [src]="pokemon?.sprites?.other?.dream_world?.front_default" alt="" srcset="">
+        </div>
+        <div class="card__detail">
+            <div class="card">
+                <div class="card-body">
+                    <h2 class="card-title">{{pokemon.name | titlecase}}</h2>
+                    <div class="btn__flex">
+                        <app-pkm-button *ngFor="let type of pokemon.types" [pkmType]="type.type.name"></app-pkm-button>
+                    </div>
+                    <div class="pkm__details">
+                        <p><strong>ID: </strong>{{pokemon.id}}</p>
+                        <p><strong>Altura: </strong>{{pokemon.height}}</p>
+                        <p><strong>Peso: </strong>{{pokemon.weight}}</p>
+                    </div>
+                    <div class="btn__container">
+                        <button type="button" class="btn btn-danger" (click)="addRemoveFavorite(); btnText == 'Eliminar de favoritos' ? increaseFavorites() : decreaseFavorites()">{{btnText | uppercase}}</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

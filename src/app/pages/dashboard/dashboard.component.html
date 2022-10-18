@@ -1,0 +1,41 @@
+<div class="dashboard">
+    <div class="dashboard__searchbar">
+        <h1>Pokemones</h1>
+        <div class="input-group input-group-sm flex-nowrap">
+            <input type="text" class="form-control" placeholder="Busca un pokemon" aria-label="Username"
+                aria-describedby="addon-wrapping" [formControl]="pokemon_field">
+        </div>
+        <button [disabled]="pokemon_field.invalid" type="button" class="btn btn-danger btn__search" (click)="searchPokemon()">BUSCAR</button>
+    </div>
+    <div *ngIf="enable_arrow_back" class="w-100 mt-3">
+        <img src="../../../assets/arrow-left.svg" alt="back" class="btn__back" (click)="reloadPokemons()">
+    </div>
+    <div class="dashboard__pokemons" infiniteScroll
+    [infiniteScrollThrottle]="500" (scrolled)="seeMore()" *ngIf="pokemons.length else nopokemons">
+        <div class="card mb-3" *ngFor="let pokemon of pokemons">
+            <app-pkm-card [pokemon]="pokemon"></app-pkm-card>
+        </div>
+    </div>
+    <div class="dashboard__seemore" *ngIf="pokemons.length">
+        <!-- <button type="button" class="btn btn__seemore" (click)="seeMore()">{{'ver más' | uppercase}}</button> -->
+    </div>
+</div>
+
+<ng-template #nopokemons>
+    <div class="dashboard__pokemons">
+        <div class="card mb-3" *ngFor="let item of [1,2,3,4,5,6,7,8,9]">
+            <div class="row g-0">
+                <div class="col-4 icon__image-centered">
+                    <p-skeleton shape="circle" size="4rem" styleClass="img-fluid rounded-start"></p-skeleton>
+                </div>
+                <div class="col-8 p-2 fs-5 pkm__details">
+                    <p-skeleton width="50%" height="2rem" class="mb-2"></p-skeleton>
+                    <p-skeleton width="80%" height="2rem"></p-skeleton>
+                    <div class="">
+                        <p-skeleton *ngFor="let type of [1,2]" width="20%" styleClass="btn btn-light"></p-skeleton>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</ng-template>

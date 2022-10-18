@@ -1,27 +1,43 @@
-# PokemonApp
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.1.3.
+# Pokemon (Rockedex) app
 
-## Development server
+A SPA to show pokemons provided by https://pokeapi.co/ 
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+You can add pokemons to favorites, search pokemon by name and see specific details from selected pokemons
 
-## Code scaffolding
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Run Locally
 
-## Running unit tests
+Clone the project
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+```bash
+  git clone https://github.com/spl0821/rockedex.git
+```
 
-## Running end-to-end tests
+Go to the project directory
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+```bash
+  cd pokemonApp
+```
 
-## Further help
+Install dependencies
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+```bash
+  npm install
+```
+
+Start the server
+
+```bash
+  ng serve -o
+```
+
+
+## Tech Stack
+
+**Client:** Angular, NgRx, PrimeNg, Bootstrap
+
+**Server:** PokeApi
+
